@@ -4,6 +4,7 @@
 .demo-top button{font:11px/1.4 system-ui,sans-serif;min-height:32px;border:1px solid #ffffff44;background:#211936cc;color:#fffaf0;border-radius:20px;padding:7px 11px;cursor:pointer}
 .demo-top button[aria-pressed=true]{background:#ffd082;color:#30263d;border-color:transparent}
 .demo-top button:focus-visible{outline:2px solid #ffd082;outline-offset:2px}
+.demo-top button:disabled,.touch-controls button:disabled{opacity:.55;cursor:progress}
 .demo-status{display:flex;justify-content:center}
 .demo-status .hud-top{position:static;transform:none;gap:7px;align-items:center}
 .demo-status .timer{font-size:20px;line-height:1.2;letter-spacing:.5px;min-width:68px;padding:5px 10px;border-radius:11px;box-shadow:0 2px 0 #0003;animation:none;transform:none}

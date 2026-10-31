@@ -41,3 +41,6 @@ document.addEventListener('visibilitychange',()=>{if(document.hidden)game.contro
 let last=performance.now();function frame(now:number){const dt=Math.min(now-last,100);last=now;if(!document.hidden){net.advance(dt);game.frame(dt);hud.update(game);for(const root of [ui,labels,footer,status])localizeGameText(root)}requestAnimationFrame(frame)}
 start(mode);requestAnimationFrame(frame);
 Object.assign(window,{__game:game,__offlineArena:net,__demoStart:start});
+// Do not accept a click before the module, renderer, and input handlers exist.
+document.querySelectorAll<HTMLButtonElement>('.demo-top button,.touch-controls button').forEach(button=>{button.disabled=false});
+document.body.dataset.gameReady='ready';

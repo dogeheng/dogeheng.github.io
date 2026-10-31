@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>hi, i'm Peiheng Li (Yuki)</title>
+  <link rel="stylesheet" href="./profile.css">
+  <link rel="stylesheet" href="./profile-theme.css">
+  <link rel="stylesheet" href="./language.css">
+</head>
+<body>
+  <main id="profileHero" class="profile-hero" aria-label="Peiheng Li (Yuki), Columbia University">
+    <label class="profile-language"><select class="language-select" data-language-selector data-i18n-label="language.label" aria-label="Language"><option value="en">EN</option><option value="zh">中文</option></select></label>
+    <div class="profile-copy">
+      <h1><span class="greeting" data-i18n="profile.greeting">hi, i'm</span><span class="name">Peiheng Li <span class="nickname">(Yuki)</span></span></h1>
+      <p class="intro" data-i18n="profile.intro">I give AI agents eyes, ears, hands<br class="desktop-break"> and everything!</p>
+      <p class="aside" data-i18n="profile.aside">And sometimes, I build some interesting things.</p>
+      <p class="school" data-i18n="profile.school">Columbia University</p>
+    </div>
+    <a class="peeking-yuki" href="./index.html" data-keep-locale data-i18n-label="profile.enter" aria-label="Yuki is waving. Meet her and try Splash Arena.">
+      <div class="profile-puppet" id="profilePuppet"><img id="profileFallback" src="./console-assets/mascot.webp" width="1024" height="1536" data-i18n-alt="profile.art" alt="Yuki peeking in from the right and waving"></div>
+    </a>
+  </main>
+  <script src="./console-assets/companion-rig.js"></script>
+  <script type="module" src="./profile.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Meet Yuki, see how she works, and play a little Splash Arena. Made by Peiheng Li.">
+  <title>Yuki · Peiheng Li</title>
+  <link rel="stylesheet" href="./lab.css">
+  <link rel="stylesheet" href="./fullscreen.css">
+  <link rel="stylesheet" href="./language.css">
+</head>
+<body>
+  <header class="site-nav"><a href="./profile.html" data-keep-locale>Peiheng Li <span>(Yuki)</span></a><nav data-i18n-label="nav.label" aria-label="页面内容"><a href="#meet" data-i18n="nav.meet">Meet Yuki</a><a href="#play">Splash Arena <span aria-hidden="true">↗</span></a><select class="language-select" data-language-selector data-i18n-label="language.label" aria-label="Language"><option value="en">EN</option><option value="zh">中文</option></select></nav></header>
+  <main>
+    <section class="meet" id="meet" data-i18n-label="lab.label" aria-label="探索 Yuki 的实现">
+      <div class="meet-copy"><p class="small-label" data-i18n="lab.kicker">a little more than a chatbot</p><h1 data-i18n="lab.title">meet Yuki.</h1><p class="meet-intro" data-i18n="lab.intro">让一个 AI，慢慢有了自己的感官。</p><p class="meet-hint" data-i18n="lab.hint">碰一碰她的眼睛、耳朵，<br>看看我给她接上了什么。</p><div class="part-nav" data-i18n-label="parts.label" aria-label="选择身体部位"><button type="button" data-part-link="eyes" data-i18n="part.eyes">眼睛</button><button type="button" data-part-link="ears" data-i18n="part.ears">耳朵</button><button type="button" data-part-link="mouth" data-i18n="part.mouth">声音</button><button type="button" data-part-link="head" data-i18n="part.head">思考</button><button type="button" data-part-link="heart" data-i18n="part.heart">性格</button><button type="button" data-part-link="memory" data-i18n="part.memory">记忆</button><button type="button" data-part-link="hands" data-i18n="part.hands">双手</button></div></div>
+      <div id="yukiStage" class="yuki-stage" data-i18n-label="yuki.label" aria-label="可互动的 Yuki">
+        <div class="yuki-shadow" aria-hidden="true"></div>
+        <div class="yuki-arrival" id="yukiArrival"><div class="yuki-puppet" id="yukiPuppet"><img id="yukiFallback" src="./console-assets/mascot.webp" width="1024" height="1536" data-i18n-alt="yuki.art" alt="深蓝长发、蓝色眼睛、鲸鱼围裙的 Yuki"><div class="body-hotspots" id="bodyHotspots" data-i18n-label="yuki.hotspots" aria-label="Yuki 身体上的交互区域"></div></div></div>
+      </div>
+      <aside class="speech" id="partSpeech" aria-live="polite" hidden><span class="speech-label" id="partLabel"></span><h2 id="partTitle"></h2><p id="partDescription"></p><div class="speech-bottom"><span id="partTech"></span><a id="partSource" data-i18n="speech.source" href="https://github.com/dogeheng/dsh-omni" target="_blank" rel="noopener noreferrer">看看代码 ↗</a></div><button type="button" id="closeSpeech" data-i18n-label="speech.close" aria-label="关闭部位说明">×</button></aside>
+      <div class="meet-bottom"><a href="https://github.com/dogeheng/dsh-omni" target="_blank" rel="noopener noreferrer">dsh-omni <span>↗</span></a><button class="motion-toggle" type="button" id="motionToggle" aria-pressed="false">暂停动作</button><a href="#play" class="scroll-cue" data-i18n="lab.scroll">下面还有一点好玩的 <span>↓</span></a></div>
+    </section>
+    <section class="arena-section" id="play" aria-labelledby="arenaTitle">
+      <div class="arena-heading"><div><p class="small-label" data-i18n="game.kicker">local “splatoon-like” game</p><h2 id="arenaTitle" data-i18n="game.title">leave a little colour.</h2><p data-i18n="game.intro">一场不用等朋友上线的泼色对战。</p></div><a href="https://github.com/dogeheng/local-splatoon" target="_blank" rel="noopener noreferrer">local-splatoon ↗</a></div>
+      <div class="game-shell" id="gameShell"><iframe id="gameFrame" data-i18n-title="game.label" title="Splash Arena 单人试玩" data-src="./game/index.html" allow="fullscreen" loading="lazy"></iframe><div class="game-cover" id="gameCover"><img id="gamePoster" src="./assets/splash-poster.jpg" data-i18n-alt="game.poster" alt="Splash Arena 的实际游戏画面"><div class="game-cover-copy"><span class="game-logo">Splash<br>Arena<span class="logo-dot">.</span></span><p data-i18n="game.pitch">涂地。潜游。把整个场地变成你的颜色。</p><button type="button" id="startGame" data-i18n="game.start">来玩一局 <span>↗</span></button><span class="game-mode" data-i18n="game.mode">单人练习 / AI 对手 · 无需安装</span></div></div></div>
+      <div class="game-caption"><span data-i18n="game.controls"><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> 移动 <span class="divider">·</span> 鼠标瞄准 / 左键涂色 <span class="divider">·</span> <kbd>Shift</kbd> 潜游补墨</span><button id="fullscreenGame" type="button" data-i18n="game.fullscreen">全屏玩 ↗</button></div>
+      <details class="game-recording"><summary data-i18n="game.recording">也可以先看一小段实机画面</summary><video controls muted loop playsinline preload="none" poster="./assets/splash-poster.jpg"><source src="./assets/splash-demo.mp4" type="video/mp4"></video></details>
+    </section>
+  </main>
+  <footer><span data-i18n="footer.made">Made by Peiheng Li (Yuki).</span><a href="./profile.html" data-keep-locale data-i18n="footer.back">back to hello ↗</a></footer>
+  <script src="./console-assets/companion-rig.js"></script><script type="module" src="./lab.js"></script>
+</body>
+</html>

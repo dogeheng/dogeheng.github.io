@@ -1,0 +1,32 @@
+{
+  "name": "peiheng-yuki-profile",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Peiheng Li (Yuki): bilingual profile, interactive companion, and a single-player paint game.",
+  "author": "Yuki Li",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dogeheng/dogeheng.github.io.git"
+  },
+  "homepage": "https://dogeheng.github.io/",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "node scripts/build-game.mjs",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "preview": "node scripts/serve.mjs"
+  },
+  "dependencies": {
+    "three": "^0.181.2",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2",
+    "typescript": "^5.9.3",
+    "@types/node": "^24.19.2",
+    "@types/three": "^0.181.0"
+  }
+}
